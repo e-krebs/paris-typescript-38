@@ -9,13 +9,13 @@ export const Nav = () => (
     />
     <Menu
       links={[
-        { to: "/", label: "Home" },
+        { to: "home", label: "Home" },
         {
           to: "tools",
           label: "Tools",
           subLinks: [
-            { to: "tools/rules", label: "Rules" },
-            { to: "tools/synonyms", label: "Synonyms" },
+            { to: "tools.rules", label: "Rules" },
+            { to: "tools.synonyms", label: "Synonyms" },
           ],
         },
         { to: "settings", label: "Settings" },

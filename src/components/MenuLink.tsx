@@ -1,9 +1,10 @@
 import type { FC, ReactNode } from "react";
 import { NavLink } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
+import { getPath, type FullPath } from "../paths";
 
 export interface MenuLinkProps {
-  to: string;
+  to: FullPath;
   label: ReactNode;
   subLinks?: MenuLinkProps[];
 }
@@ -13,7 +14,7 @@ export const MenuLink: FC<
 > = ({ to, label, subLinks = [], border }) => (
   <li className={twMerge("flex flex-col")}>
     <NavLink
-      to={to}
+      to={getPath(to)}
       className={({ isActive }) =>
         twMerge(
           "pl-3 my-0 py-0.5",
