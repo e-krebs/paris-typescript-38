@@ -1,30 +1,16 @@
-# React + TypeScript + Vite
+# Demo for Live-coding during [Paris Typescript #38](https://www.meetup.com/fr-FR/paris-typescript/events/300591093/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- the `main` branch is the starting point of the live-coding demo
+- the branch `feat/simple-implementation` includes the solution
+- the branch `feat/route-params` includes a solution which works with route param (⚠️ advanced Typescript)
 
-Currently, two official plugins are available:
+# running the project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+to run the project you first need to install [bun](https://bun.sh)
 
-## Expanding the ESLint configuration
+then run:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- `bun install` to install dependencies
+- `bun run dev` to run the server in dev mode
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+> this project is simple enough that it should work well with other package managers. There is just no lockfile for those.
