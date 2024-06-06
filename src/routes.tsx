@@ -1,6 +1,13 @@
 import { type RouteObject } from "react-router-dom";
 import { Layout } from "./Layout";
-import { NotFound, Rules, Synonyms, Tools, Home, Settings } from "./pages";
+import {
+  NotFound,
+  Rules,
+  Synonyms,
+  Tools,
+  Home,
+  Settings,
+} from "./pages";
 
 export const routes: RouteObject[] = [
   {

@@ -4,4 +4,5 @@ export * from "./NotFound";
 export const Rules = () => "Rules Page 📏";
 export const Synonyms = () => "Synonyms Page 🍫";
 export const Home = () => "Home 🏠";
-export const Settings = () => "My wonderful settings page 🌈";
+export const Settings = () =>
+  "My wonderful settings page 🌈";

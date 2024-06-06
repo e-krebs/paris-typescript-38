@@ -8,12 +8,9 @@ export interface MenuLinkProps {
   subLinks?: MenuLinkProps[];
 }
 
-export const MenuLink: FC<MenuLinkProps & { border?: true }> = ({
-  to,
-  label,
-  subLinks = [],
-  border,
-}) => (
+export const MenuLink: FC<
+  MenuLinkProps & { border?: true }
+> = ({ to, label, subLinks = [], border }) => (
   <li className={twMerge("flex flex-col")}>
     <NavLink
       to={to}
@@ -21,7 +18,8 @@ export const MenuLink: FC<MenuLinkProps & { border?: true }> = ({
         twMerge(
           "pl-3 my-0 py-0.5",
           isActive && "font-bold text-yellow-500",
-          border && "-ml-px border-l border-transparent transition-[border-color]",
+          border &&
+            "-ml-px border-l border-transparent transition-[border-color]",
           isActive && border && "border-yellow-500"
         )
       }
@@ -30,7 +28,11 @@ export const MenuLink: FC<MenuLinkProps & { border?: true }> = ({
     </NavLink>
 
     {subLinks.length > 0 && (
-      <ul className={twMerge("flex flex-col gap-y-3 my-2 py-1 border-l ml-3 border-zinc-700")}>
+      <ul
+        className={twMerge(
+          "flex flex-col gap-y-3 my-2 py-1 border-l ml-3 border-zinc-700"
+        )}
+      >
         {subLinks.map((props) => (
           <MenuLink {...props} border={true} />
         ))}

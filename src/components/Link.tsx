@@ -6,6 +6,10 @@ interface LinkProps {
   children: ReactNode;
 }
 
-export const Link: FC<LinkProps> = (props) => (
-  <NavLink {...props} className="font-bold underline text-zinc-700" />
+export const Link: FC<LinkProps> = ({ to, ...props }) => (
+  <NavLink
+    {...props}
+    to={to}
+    className="font-bold underline text-zinc-700"
+  />
 );
