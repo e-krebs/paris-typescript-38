@@ -4,6 +4,10 @@
 - the branch `feat/simple-implementation` includes the solution
 - the branch `feat/route-params` includes a solution which works with route param (⚠️ advanced Typescript)
 
+# slides
+
+slides can be found here: [slides.pdf](./slides.pdf)
+
 # running the project
 
 to run the project you first need to install [bun](https://bun.sh)
